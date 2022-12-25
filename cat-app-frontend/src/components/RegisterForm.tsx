@@ -15,7 +15,6 @@ const RegisterForm=()=> {
     const handleRegister = (e: any) => {
         e.preventDefault()
         const userRegister = {"email": email, "username": username, "password": password}
-        console.log(userRegister)
         fetch("http://localhost:7070/register", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
