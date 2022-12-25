@@ -3,14 +3,12 @@
     font-size: 36px;
     text-align: center;
     margin: 3%;
-
 }
 .register p {
     color: #666;
     font-size: 18px;
     text-align: center;
     margin: 3%;
-
 }
 .form-div {
     background: #e1e1e1;
@@ -42,7 +40,6 @@
     background-color: #83719C;
     border-color: #83719C;
     transition: 0.8s;
-
 }
 .error{
     color: red;

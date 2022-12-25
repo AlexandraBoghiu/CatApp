@@ -4,15 +4,20 @@ import './App.css';
 import LoginForm from './components/LoginForm';
 import Home from "./components/Home";
 import RegisterForm from "./components/RegisterForm";
+import PrivateRoutes from "./components/PrivateRoutes";
+import FrontPage from "./components/FrontPage";
 
 function App() {
   return (
       <BrowserRouter>
         <div className="App">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<FrontPage />} />
             <Route path="/login" element={<LoginForm/>} />
-              <Route path="/register" element={<RegisterForm/>} />
+            <Route path="/register" element={<RegisterForm/>} />
+            <Route element={<PrivateRoutes />}>
+              <Route path="/home" element={<Home/>}/>
+            </Route>
           </Routes>
 
         </div>

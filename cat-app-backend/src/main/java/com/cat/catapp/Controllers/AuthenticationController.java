@@ -33,4 +33,9 @@ public class AuthenticationController {
     public boolean login(@RequestBody UserDto userDto) {
         return userService.login(userDto);
     }
+
+    @PostMapping("/username")
+    public String findUsername(@RequestBody String email) {
+        return userService.getUsername(email);
+    }
 }

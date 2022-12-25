@@ -12,7 +12,6 @@ const LoginForm=()=>{
     const handleLogin=(e : any)=>{
         e.preventDefault()
         const userLogin={"email":email, "password":password}
-        console.log(userLogin)
         fetch("http://localhost:7070/login",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
@@ -21,7 +20,7 @@ const LoginForm=()=>{
         }).then(async response => {
             const data = await response.text();
             if(data === 'true'){
-                navigate("/users")
+                navigate("/home")
                 localStorage.setItem('email', email)
             }
             else{
@@ -64,6 +63,7 @@ const LoginForm=()=>{
             </div>
             </form>
         </div>
+        
     );
 };
 

@@ -24,17 +24,19 @@ const RegisterForm=()=> {
         }).then(async response => {
             const data = await response.text();
             if (data === 'true') {
-                navigate("/users")
+                navigate("/login")
                 localStorage.setItem('email', email)
             } else {
-                setError('This email is already used, please try again.')
+                setError('Used email or username, please try again.')
             }
         })
             .catch((error) => {
                 console.log(error)
             });
     }
+
     return (
+
         <div className="form-div">
             <h1>You're just a few clicks away /ᐠ｡ꞈ｡ᐟ\</h1>
             <p>Please enter your info to create an account</p>
