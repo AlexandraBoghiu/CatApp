@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class AuthenticationController {
 
@@ -23,12 +24,12 @@ public class AuthenticationController {
         return userService.getUsers();
     }
 
-    @PostMapping("/register/submit")
-    public String registration(@RequestBody UserDto userDto){
+    @PostMapping("/register")
+    public boolean registration(@RequestBody UserDto userDto){
         userService.saveUser(userDto);
-        return "redirect:/register?success";
+        return true;
     }
-    @PostMapping("/login/submit")
+    @PostMapping("/login")
     public boolean login(@RequestBody UserDto userDto) {
         return userService.login(userDto);
     }

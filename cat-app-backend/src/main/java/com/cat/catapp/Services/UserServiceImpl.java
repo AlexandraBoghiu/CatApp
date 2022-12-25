@@ -40,7 +40,6 @@ public class UserServiceImpl implements UserService{
     public boolean login(UserDto userDto){
         return userRepository.findByEmailAndPassword(userDto.getEmail(), String.valueOf(userDto.getPassword().hashCode()))!= null;
     }
-
     @Override
     public List<User> getUsers() {
         return userRepository.findAll();
