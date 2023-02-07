@@ -26,7 +26,7 @@ Componenta [Logo](https://github.com/AlexandraBoghiu/CatApp/blob/main/cat-app-fr
 Componenta [Home](https://github.com/AlexandraBoghiu/CatApp/blob/main/cat-app-frontend/src/components/Home.tsx) comunica cu [UserInfo](https://github.com/AlexandraBoghiu/CatApp/blob/main/cat-app-frontend/src/components/UserInfo.tsx)  
 - Rute publice si private **1p** 
 
-Ruta privata: ```/home``` care este accesta daca utilizatorul este autentificat, lucru ce se observa din [PrivateRoutes](https://github.com/AlexandraBoghiu/CatApp/blob/main/cat-app-frontend/src/components/PrivateRoutes.tsx)  
+Ruta privata: ```/home``` care este accesata doar daca utilizatorul este autentificat, lucru ce se observa din [PrivateRoutes](https://github.com/AlexandraBoghiu/CatApp/blob/main/cat-app-frontend/src/components/PrivateRoutes.tsx)  
 Ruta publica: cele de la primul punct  
 - Sa fie cel putin o pagina cu un form (login/register)  **2p**
 
