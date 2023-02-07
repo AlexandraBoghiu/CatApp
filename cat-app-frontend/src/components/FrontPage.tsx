@@ -2,6 +2,7 @@ import React from 'react';
 import './FrontPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate  } from 'react-router-dom';
+import Logo from "./Logo";
 
 
 
@@ -15,6 +16,8 @@ const FrontPage = () => {
     };
 
     return (
+        <div>
+            <Logo></Logo>
         <div className = "home">
         <div>
             <h1>Welcome to your daily dose of cat facts! ^._.^</h1>
@@ -25,6 +28,7 @@ const FrontPage = () => {
         <div className="button-container">
         <button type="button" className="btn-primary" onClick={handleRegister}>Register</button>
         <button type="button" className="btn-primary" onClick={handleLogin}>Login</button>
+        </div>
         </div>
         </div>
     );

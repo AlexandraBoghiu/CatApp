@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useNavigate} from "react-router-dom";
 import MessageDisplayer from "./UserInfo";
 import {useState} from "react";
+import Logo from "./Logo";
 
 const Home=()=> {
 
@@ -36,13 +37,14 @@ const Home=()=> {
     }
 
     return(
-        <div className = 'home'>
+        <div>
+            <ul>
+                <button type="button" className="btn-logout" onClick={handleLogout}>Logout</button>
+            </ul>
+            <Logo></Logo>
+        <div className='home'>
             <div>
-                <ul>
-                   <button type="button" className="btn-logout" onClick={handleLogout}>Logout</button>
-                    <div className="name">Cat facts </div>
-                </ul>
-                <div >
+                <div>
                     <h1><MessageDisplayer email={email}/> </h1>
                 </div>
                 <p>Press the button to get a fun cat fact!</p>
@@ -50,6 +52,7 @@ const Home=()=> {
                 <div>{fact && <div className="container-text">{fact}</div>}</div>
                 <img src={photo} alt="cats" />
             </div>
+        </div>
         </div>
     )
 };

@@ -1,0 +1,18 @@
+.logo {
+    width: 10%;
+    display: block;
+    padding-left: 2%;
+    padding-top: 2%;
+    border-radius: 50%;
+}
+
+.logo-text {
+    width: 10%;
+    display: block;
+    padding-left: 2%;
+    border-radius: 50%;
+    font-family: "Oriental Cats", serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
